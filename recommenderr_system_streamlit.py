@@ -42,7 +42,7 @@ def recommend(title, num_recommendations=5):
     return results
 
 # Интерфейс Streamlit
-st.title("Рекомендательная система")
+st.title("Рекомендательная система по играм")
 
 tab1, tab2 = st.tabs(["Поиск", "Рекомендации"])
 
