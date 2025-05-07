@@ -2,7 +2,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 # Загружаем данные
-@st.cache
+@st.cache_data
 def load_data():
     # Замените на ваш путь к датасету
     df = pd.read_csv('games1.csv')
