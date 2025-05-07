@@ -1,3 +1,6 @@
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
 # Загружаем данные
 @st.cache_data
 def load_data():
@@ -39,7 +42,7 @@ def recommend(title, num_recommendations=5):
     return results
 
 # Интерфейс Streamlit
-st.title("Рекомендательная система по играм")
+st.title("Рекомендательная система")
 
 tab1, tab2 = st.tabs(["Поиск", "Рекомендации"])
 
@@ -55,4 +58,4 @@ with tab2:
     selected_title = st.selectbox("Выберите товар:", df['Название'].unique())
     if selected_title:
         recommendations = recommend(selected_title)
-        st.write(recommendations) 
+        st.write(recommendations)
